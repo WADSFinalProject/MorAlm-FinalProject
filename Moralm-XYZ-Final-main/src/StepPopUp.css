@@ -1,0 +1,141 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 85%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: -100px;
+  margin-left: 15px;
+}
+
+.step-title {
+  margin: 0; /* Remove margin for better alignment */
+}
+
+.modal-body {
+  margin-bottom: 20px; /* This margin might be causing the space */
+  margin-left: 20px; /* Adjust as needed */
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-button, .close-button, .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.confirm-button {
+  background-color: #467E18;
+  color: white;
+  border-radius: 5px;
+}
+
+.confirm-button:hover {
+  background-color: #265c28;
+}
+
+.cancel-button {
+  background-color: #d3d3d3;
+  color: black;
+  border-radius: 5px;
+}
+
+.close-button {
+  background: none;
+  color: black;
+  font-size: 1.5em;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.modal-label {
+  display: block;
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 5px;
+  font-family: DM Sans, sans-serif;
+}
+
+.modal-number {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: DM Sans, sans-serif;
+  margin-top: 5px;
+}
+
+
+.modal-input {
+  margin-top: 10px;
+}
+
+.modal-input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  color: black;
+}
+/* Existing styles */
+
+/* Add new media queries for mobile responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90vw;
+    padding: 10px;
+  }
+
+  .confirm-button, .close-button, .cancel-button {
+    font-size: 14px;
+  }
+
+  .modal-field label {
+    font-size: 16px;
+  }
+
+  .modal-number {
+    font-size: 14px;
+  }
+}

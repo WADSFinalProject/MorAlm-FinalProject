@@ -1,0 +1,157 @@
+.archive-content {
+    width: 95%;
+    background-color: #fffff0;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px; /* Added padding for better appearance */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Added margin-bottom for spacing */
+    margin-top: 20px;
+}
+
+.back-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.Historytitle {
+    font-weight: 100;
+    font-family: DM Sans, sans-serif;
+    margin: 0;
+    margin-right: 2000px;
+    z-index: 0;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: DM Sans, sans-serif;
+    width: 230px;
+    background-color: #EFEFEF;
+}
+
+.table-container {
+    overflow-x: auto; /* Allows horizontal scrolling */
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse; /* Use collapse for better table appearance */
+    background-color: #fffff0;
+    margin-top: 10px;
+}
+
+.history-table th, .history-table td {
+    padding: 20px; /* Increased padding for wider columns */
+    font-family: DM Sans, sans-serif;
+    text-align: left;
+    border: 1px solid #ddd;
+    color: black;
+    min-width: 150px; /* Set a minimum width for each column */
+}
+
+.history-table th {
+    background-color: #033324;
+    color: white;
+    font-weight: normal;
+    border-color: #fffff0;
+}
+ 
+.history-table th:first-child {
+    border-top-left-radius: 5px;
+}
+
+.history-table th:last-child {
+    border-top-right-radius: 5px;
+}
+
+.history-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.history-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+.history-table thead {
+    display: table-header-group;
+}
+
+.history-table tbody {
+    display: table-row-group;
+}
+
+.history-table thead::after {
+    content: "";
+    display: block;
+    height: 15px;
+    background-color: #fffff0;
+}
+
+.page-controls span {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.page-controls span:hover {
+    text-decoration: underline;
+}
+
+.BackButton {
+    top: 100px;
+    max-height: 30px;
+    margin-right: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .archive-content {
+        width: 100%;
+        background-color: #fffff0;
+        display: flex;
+        flex-direction: column;
+        color: #333;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding: 0px; /* Added padding for better appearance */
+    }
+    
+    .history-table {
+        width: 100%;
+    }
+
+    .history-table th, .history-table td {
+        padding: 10px; /* Adjusted padding for smaller screens */
+        font-family: DM Sans, sans-serif;
+        text-align: left;
+        border: 1px solid #ddd;
+        font-size: 15px;
+        color: black;
+    }
+    
+    .history-table th {
+        background-color: #033324;
+        color: white;
+        font-weight: normal;
+        font-size: 10px;
+        border-color: #fffff0;
+    }
+}
