@@ -1,0 +1,661 @@
+/* Existing styles */
+body {
+  background-color: #FFFFF0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #8b8b8b; /* Change this to your desired thumb color */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #fcfcfc; /* Change this to your desired track color */
+}
+
+body.no-scroll{
+  overflow: hidden;
+}
+
+.moralmlogo {
+  margin-left: -5%;
+  max-width: 130px;
+  padding-bottom: 10px;
+  margin-top: -25px;
+  margin-bottom: 10%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #467e18;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav.open {
+  width: 19vh;
+  padding-left: 3%;
+}
+
+.sidenav a {
+  padding: 20px 20px 20px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: DM Sans, sans-serif;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+  position: relative;
+}
+
+.sidenav a.active {
+  background-color: #fffff0;
+  color: black;
+  font-weight: bold;
+  border-radius: 40px 0px 0px 40px;
+  padding-left: 20px;
+  margin-left: -5px;
+  position: relative;
+}
+
+.sidenav a:hover {
+  color: #9f9f9f;
+}
+
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.top-right-buttons {
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  display: flex;
+  gap: 10px;
+  z-index: 5;
+}
+
+.togglebtn{
+  margin-left: 20px;
+  background-color: #fffff0;
+  border: #fffff0;
+  top: 10px;
+  opacity: 0;
+}
+
+.top-right-buttons.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.icon-container {
+  width: 50px;
+  height: 50px;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-container:hover {
+  background-color: #9f9f9f;
+}
+
+.icon-container-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile-arrow-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* Adjust the space between icons */
+}
+
+.icon {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+.icon-archive{
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.User{
+  max-width: 40px;
+  max-height: 40px;
+  margin-left: 10px;
+}
+
+.icon-container-burger{
+  width: 50px;
+  height: 50px;
+  background-color: #EFEFEF;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  visibility: hidden;
+}
+.IconBurger{
+  max-width: 30px;
+  max-height: 30px;
+  visibility: hidden;
+}
+
+.IconBurger.archive-open, .icon-container-burger.archive-open{
+  visibility: hidden;
+}
+
+.arrow {
+  transform: translateX(5px); /* Adjust the arrow position to look visually aligned */
+}
+
+.content-container {
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.content-container.archive-closed {
+  margin-left: 190px;
+}
+
+.content-container.archive-open {
+  margin-left: 2%;
+  background-color: #fffff0;
+}
+
+.content-container h2.ProcessTitle {
+  margin-left: 5px;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 45px;
+  font-size: 40px;
+  font-family: DM Sans, sans-serif;
+  font-weight: 100;
+}
+
+.time-ellipsis {
+  display: flex;
+  align-items: center;
+}
+
+.ellipsis {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
+}
+
+.batch-dropdown.active .dropdown-content {
+  display: block;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.process-step {
+  background-color: #EFEFEF;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative; /* Add position relative */
+}
+
+.process-step.completed {
+  background-color: #033324;
+}
+
+.process-step .step-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: black; /* Default color for the number */
+}
+
+.process-step.completed .step-number {
+  color: white; /* Color for completed step number */
+}
+
+.process-step .step-text {
+  font-size: 12px;
+  margin-top: 5px;
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+  color: black;
+}
+
+.process-step:hover {
+  background-color: #9f9f9f;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .sidenav.open {
+    width: 20vh;
+  }
+
+  .content-container.archive-closed {
+    margin-left: 18%;
+  }
+
+  .content-container.archive-open {
+    margin-left: 5%;
+  }
+
+  .content-container h2, .ProcessTitle {
+    font-size: 2rem;
+  }
+}
+
+.title-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: DM Sans, sans-serif;
+  background-color: #EFEFEF;
+  color: black;
+  padding: 10px;
+  width: 95%;
+  margin-left: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.title-modal {
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 2%;
+}
+
+.column-header {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+}
+
+.batch-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: DM Sans, sans-serif;
+  font-size: 15px;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 50px;
+  background-color: #fffff0;
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.batch-title {
+  display: flex;
+  justify-content: space-between;
+  font-family: DM Sans, sans-serif;
+  font-weight: 500;
+  padding: 5px;
+  padding-left: 0%;
+  background-color: #033324;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  box-sizing: border-box;
+}
+
+.batch-content {
+  display: flex;
+  flex-wrap: wrap; /* Allow steps to wrap to the next line */
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.step-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 0 10px; /* Adjust margin to create space between steps */
+  flex-grow: 1; /* Allow steps to grow to fill available space */
+}
+
+.step-container:not(:last-child)::after {
+  content: " ";
+  position: absolute;
+  top: 20px;
+  right: -60%; /* Adjust position for the line */
+  width: 100%; /* Full width */
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  z-index: 0;
+}
+
+.step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.step-container.completed .step-circle {
+  background-color: #033324;
+  color: white;
+}
+
+.step-name {
+  margin-top: 5px;
+  color: black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media (max-width: 833px) {
+  .step-name {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+
+/* Existing styles */
+
+/* Add new media queries for mobile responsiveness */
+@media (max-width: 500px) {
+  .sidenav {
+      width: 20px;
+      padding-left: 0;
+      padding: 0;
+      z-index: 7;
+  }
+
+  .sidenav.open {
+    width: 17vh;
+  }
+
+  .sidenav.closed {
+    width: 0;
+  }
+
+  .sidenav a {
+      font-size: 16px;
+      padding: 16px;
+      padding-left: 0px;
+  }
+
+  .sidenav a.active {
+      border-radius: 10px;
+      margin-right: 10px ;
+      padding: 7px;
+    }
+
+  .sidenav .logo img {
+    padding-top: 10px;
+      max-width: 90px;
+      margin: 0 auto;
+  }
+
+  .top-right-buttons {
+      right: 30px;
+      top: 10px;
+      gap: 5px;
+  }
+  .icon{
+    max-width: 20px;
+    max-height: 20px;
+  }
+
+  .icon-container, .icon-container-profile {
+      width: 35px;
+      height: 35px;
+  }
+  
+  .icon-container-profile{
+    padding-left: 6px;
+  }
+
+  .content-container.archive-closed {
+      margin-left: 0px;
+      padding: 10px;
+  }
+
+  .content-container.archive-open {
+      margin-left: 10px;
+  }
+
+  .content-container h2.ProcessTitle {
+      padding-top: 10px;
+      font-size: 15px ;
+      margin: 0;
+      margin-left: 0px;
+      max-width: 100px;
+  }
+
+  .batch-row {
+      margin-top: 15px;
+      padding: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+
+  .batch-title {
+      padding-left: 0%;
+      font-size: 13px;
+      height: 40px;
+  }
+
+  .column-header {
+    flex: 1;
+    text-align: center;
+    padding: 0px;
+    padding-top: 7px;
+  }
+
+  .batch-content {
+      padding: 5px;
+  }
+
+  .step-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .step-circle {
+      width: 25px;
+      height: 25px;
+  }
+
+  .step-name {
+      font-size: 5px;
+      margin-top: 5px;
+  }
+
+  .step-container:not(:last-child)::after {
+    content: " ";
+    position: absolute;
+    top: 15px;
+    right: -80%; /* Adjust position for the line */
+    width: 100%; /* Full width */
+    height: 1px;
+    background-color: #033324;
+    z-index: 0;
+  }
+
+  .icon-container-burger, .IconBurger{
+    visibility: visible;
+    width: 35px;
+    height: 35px;
+  }
+  .icon-container-burger{
+    margin-right: 120px;
+    margin-top: 8px;
+    position: absolute;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 6;
+    transition: opacity 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 350px) {
+  .step-container{
+    padding: 0px;
+    margin: 0;
+  }
+  
+  .batch-row{
+    padding: 0px;
+    margin: 2px;
+  }
+
+  .content-container h2.ProcessTitle{
+    margin-bottom: 20px;
+  }
+}
+
+.dropdown-menu-profile {
+  position: absolute;
+  top: calc(100% + 5px);
+  background-color: white;
+  border: 1px solid #033324;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 10000;
+  padding: 10px;
+}
+
+.dropdown-item-profile {
+  padding: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  color: black;
+  font-family: DM Sans, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-item-profile:hover {
+  background-color: #f5f5f5;
+}
+
+.dropdown-item-profile.logout {
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.separator{
+  height: 1px;
+  background-color: #ddd;
+  margin: 5px 0;
+}
+
+.LogoutIcon{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+/* New styles for "No batches available" message */
+.no-batches-message {
+    text-align: center;
+    color: #333;
+    font-size: 18px;
+    font-family: DM Sans, sans-serif;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fffff0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 50%; /* Adjust width as needed */
+}

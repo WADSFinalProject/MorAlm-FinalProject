@@ -1,0 +1,157 @@
+.warehouse-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.warehouse-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    max-height: 85%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.warehouse-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.AllPackageTitle {
+    margin-left: 3px;
+    font-size: 28px;
+    font-weight: 100;
+    font-family: DM Sans, sans-serif;
+}
+
+.warehouse-close-button {
+    background: none;
+    border: none;
+    font-size: 31px;
+    cursor: pointer;
+    color: black;
+}
+
+.warehouse-modal-body {
+    color: black;
+    text-align: center;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.warehouse-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.warehouse-table th, .warehouse-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-family: DM Sans, sans-serif;
+    font-weight: 100;
+}
+
+.warehouse-table th.Check{
+    padding: 0;
+}
+
+.warehouse-table th {
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.warehouse-table td {
+    background-color: #f9f9f9;
+}
+
+.no-packages {
+    font-size: 16px;
+    color: #333;
+}
+
+.selected {
+    background-color: #e6ffe6;
+}
+
+.expedition-select {
+    padding: 5px;
+    font-family: DM Sans, sans-serif;
+}
+
+.deliver-button {
+    background-color: #467E18;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-family: DM Sans, sans-serif;
+}
+
+.deliver-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.warehouse-modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.warehouse-confirm-button {
+    background-color: #467E18;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-family: DM Sans, sans-serif;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.warehouse-confirm-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .warehouse-modal-content {
+        width: 90vw;
+        padding: 10px;
+    }
+
+    .AllPackageTitle {
+        font-size: 20px;
+    }
+
+    .warehouse-table th, .warehouse-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .warehouse-confirm-button {
+        width: 80%;
+    }
+}
